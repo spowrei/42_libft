@@ -1,44 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mukaplan <mukaplan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/08 22:27:31 by mukaplan          #+#    #+#             */
-/*   Updated: 2024/10/17 15:54:42 by mukaplan         ###   ########.fr       */
+/*   Created: 2024/10/17 13:49:49 by mukaplan          #+#    #+#             */
+/*   Updated: 2024/10/17 15:49:23 by mukaplan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "libft.h"
 
-#include <stddef.h>
+void	*ft_memset(void *s, int c, size_t n)
+{
+	char *dest;
+	unsigned int i;
 
-/*
-isalpha+
-isdigit+
-isalnum+
-isascii+
-isprint+
-strlen+
-memset ? öğren acil
-bzero 
-memcpy
-memmove
-strlcpy
-strlcat
-toupper
-tolower
-strchr
-strrchr
-strncmp
-memchr
-memcmp
-strnstr
-atoi
-calloc
-strdup
+	dest = s;
+	i = 0;
 
-*/
-#endif
+	while (i < n)
+	{
+		dest[i] = c;
+		i++;
+	}
+	return ((void *)s);
+}
+
+//! dest[i] değeri int dizi girildiyse bufferoverflow olmaz mı ??
