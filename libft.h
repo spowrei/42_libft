@@ -13,14 +13,16 @@
 #ifndef LIBFT_H
 # define LIBFT_H
 
+#include <stddef.h> // size_t için
+
 /*
 isalpha+
 isdigit+
 isalnum+
-isascii
-isprint
-strlen
-memset
+isascii+
+isprint+
+strlen+
+memset    
 bzero
 memcpy
 memmove
