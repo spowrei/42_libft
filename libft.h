@@ -22,7 +22,7 @@ isalnum+
 isascii+
 isprint+
 strlen+
-memset    
+memset+ 			neden void* b kullanıyoz
 bzero
 memcpy
 memmove
