@@ -23,9 +23,9 @@ isascii+
 isprint+
 strlen+
 memset+ 			neden void* b kullanıyoz
-bzero
-memcpy
-memmove
+bzero+
+memcpy+
+memmove!!! abi ben anlamadım
 strlcpy
 strlcat
 toupper

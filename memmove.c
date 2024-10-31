@@ -1,27 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   memmove.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mukaplan <mukaplan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/31 14:32:27 by mukaplan          #+#    #+#             */
-/*   Updated: 2024/10/31 14:32:27 by mukaplan         ###   ########.fr       */
+/*   Created: 2024/10/31 15:36:24 by mukaplan          #+#    #+#             */
+/*   Updated: 2024/10/31 15:36:24 by mukaplan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	size_t	i;
+	unsigned int	i;
+	char			*src_char;
+	char			*dst_char;
 
-	i = 0;
-	while (i < n)
+	i = len;
+	src_char = (char *)src;
+	dst_char = (char *)dst;
+	if (dst == src)
+		return (dst);
+	else if (dst_char > src_char)
 	{
-		((char *)dst)[i] = ((char *)src)[i];
-		i++;
+		while (i-- > 0)
+			*(dst_char + i) = *(src_char + i);
 	}
-	return (dst);
+	else
+	{
+		i = 0;
+		while (i < len)
+		{
+			*(dst_char + i) = *(src_char + i);
+			i++;
+		}
+	}
+	return (dst_char);
 }
-// n = kopyalanacak veri boyutu
