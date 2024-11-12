@@ -34,8 +34,8 @@ strchr+
 strrchr+
 strncmp+
 memchr+
-memcmp
-strnstr
+memcmp+
+strnstr+
 atoi
 calloc
 strdup
