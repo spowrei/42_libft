@@ -1,44 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mukaplan <mukaplan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/08 22:27:31 by mukaplan          #+#    #+#             */
-/*   Updated: 2024/10/08 22:27:31 by mukaplan         ###   ########.fr       */
+/*   Created: 2024/11/11 22:13:24 by mukaplan          #+#    #+#             */
+/*   Updated: 2024/11/11 22:13:24 by mukaplan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "libft.h"
 
-#include <stddef.h> // size_t için
+void *memchr(const void *str, int c, size_t size)
+{
+	size_t i;
 
-/*
-isalpha+
-isdigit+
-isalnum+
-isascii+
-isprint+
-strlen+
-memset+ 			neden void* b kullanıyoz
-bzero+
-memcpy+
-memmove+
-strlcpy+
-strlcat+
-toupper+
-tolower+
-strchr+
-strrchr+
-strncmp+
-memchr+
-memcmp
-strnstr
-atoi
-calloc
-strdup
-
-*/
-#endif
+	i = 0;
+	while (i < size)
+	{
+		if (((char *)size)[i] == (char)c)
+			return ((void *)(size + i));
+		i++;
+	}
+	return (0);
+}
+// char data[] = { 'a', 'b', 'c', '\0', 'd', 'e', 'f' };     // memchr '\0' dan sonrasında aramaya devam eder strchr etmez

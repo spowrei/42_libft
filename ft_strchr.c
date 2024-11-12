@@ -1,44 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mukaplan <mukaplan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/08 22:27:31 by mukaplan          #+#    #+#             */
-/*   Updated: 2024/10/08 22:27:31 by mukaplan         ###   ########.fr       */
+/*   Created: 2024/11/11 21:17:40 by mukaplan          #+#    #+#             */
+/*   Updated: 2024/11/11 21:17:40 by mukaplan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "libft.h"
 
-#include <stddef.h> // size_t için
-
-/*
-isalpha+
-isdigit+
-isalnum+
-isascii+
-isprint+
-strlen+
-memset+ 			neden void* b kullanıyoz
-bzero+
-memcpy+
-memmove+
-strlcpy+
-strlcat+
-toupper+
-tolower+
-strchr+
-strrchr+
-strncmp+
-memchr+
-memcmp
-strnstr
-atoi
-calloc
-strdup
-
-*/
-#endif
+char	*ft_strchr(const char *str, int c)
+{
+	int i;
+	int str_len;
+	
+	str_len = ft_strlen(str);
+	i = 0;
+	while (i < str_len)
+	{
+		if (*(str + i) == c)
+			return (str + i);
+		i++;
+	}
+	return (NULL);
+}

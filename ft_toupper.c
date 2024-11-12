@@ -1,44 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mukaplan <mukaplan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/08 22:27:31 by mukaplan          #+#    #+#             */
-/*   Updated: 2024/10/08 22:27:31 by mukaplan         ###   ########.fr       */
+/*   Created: 2024/11/11 21:15:14 by mukaplan          #+#    #+#             */
+/*   Updated: 2024/11/11 21:15:14 by mukaplan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
-
-#include <stddef.h> // size_t için
-
-/*
-isalpha+
-isdigit+
-isalnum+
-isascii+
-isprint+
-strlen+
-memset+ 			neden void* b kullanıyoz
-bzero+
-memcpy+
-memmove+
-strlcpy+
-strlcat+
-toupper+
-tolower+
-strchr+
-strrchr+
-strncmp+
-memchr+
-memcmp
-strnstr
-atoi
-calloc
-strdup
-
-*/
-#endif
+int	ft_toupper(int c)
+{
+	if (c >= 'a' && c <= 'z')
+		return (c - 32);
+	return (c);
+}

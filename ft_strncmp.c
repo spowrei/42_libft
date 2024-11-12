@@ -1,44 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mukaplan <mukaplan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/08 22:27:31 by mukaplan          #+#    #+#             */
-/*   Updated: 2024/10/08 22:27:31 by mukaplan         ###   ########.fr       */
+/*   Created: 2024/11/11 21:57:33 by mukaplan          #+#    #+#             */
+/*   Updated: 2024/11/11 21:57:33 by mukaplan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+int ft_strncmp(const char *s1, const char *s2, unsigned int n)
+{
+	unsigned int i;
 
-#include <stddef.h> // size_t için
+	i = 0;
+	if (n == 0)
+		return (0);
 
-/*
-isalpha+
-isdigit+
-isalnum+
-isascii+
-isprint+
-strlen+
-memset+ 			neden void* b kullanıyoz
-bzero+
-memcpy+
-memmove+
-strlcpy+
-strlcat+
-toupper+
-tolower+
-strchr+
-strrchr+
-strncmp+
-memchr+
-memcmp
-strnstr
-atoi
-calloc
-strdup
-
-*/
-#endif
+	while (s1[i] != '\0' && s2[i] != '\0' && s1[i] == s2[i] & i < n - 1)
+		i++;
+	return (s1[i] - s2[i]);
+}
