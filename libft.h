@@ -14,7 +14,7 @@
 # define LIBFT_H
 
 #include <stdlib.h> // size_t, NULL, malloc()
-// #include <unistd.h>   ?? nerede kullanıcaz
+// #include <unistd.h>
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
@@ -48,7 +48,7 @@ char	*ft_strjoin(char const *s1, char const *s2);	//>   kontrol et
 char	*ft_strtrim(char const *s1, char const *set);	//!!   yapamaım
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));	//!!   bu ne amk
 char	*ft_itoa(int n);
-char	**ft_split(char const *s, char c);	//!!
+char	**ft_split(char const *s, char c);
 
 size_t	ft_strlen(const char *s);
 size_t	ft_strlcpy(char *dest, const char *src, size_t n);
