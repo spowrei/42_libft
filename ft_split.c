@@ -1,8 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mukaplan <mukaplan@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/16 12:37:01 by mukaplan          #+#    #+#             */
+/*   Updated: 2024/11/16 12:38:32 by mukaplan         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-static int ft_word_count(char const *s, char c)
+static int	ft_word_count(char const *s, char c)
 {
-	int count;
+	int	count;
 
 	count = 1;
 	while ((char)*s == c)
@@ -16,17 +28,16 @@ static int ft_word_count(char const *s, char c)
 	return (count);
 }
 
-static char *ft_new_word(char **cursor, char c)
+static char	*ft_new_word(char **cursor, char c)
 {
-	char *temp;
-	unsigned int len;
-	char *word;
+	char			*temp;
+	unsigned int	len;
+	char			*word;
 
 	len = 0;
-	
 	while (**cursor == c)
 		(*cursor)++;
-		temp = *cursor;
+	temp = *cursor;
 	while (**cursor != c && **cursor != '\0')
 	{
 		len++;
@@ -39,16 +50,17 @@ static char *ft_new_word(char **cursor, char c)
 	return (word);
 }
 
-char **ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
-	char **strings;
-	unsigned int i = 0;
-	int word_count;
-	char *cursor;
+	char			**strings;
+	unsigned int	i;
+	int				word_count;
+	char			*cursor;
 
+	i = 0;
 	cursor = (char *)s;
 	word_count = ft_word_count(s, c);
-	strings = (char **)malloc(sizeof(char *) * (word_count +1));
+	strings = (char **)malloc(sizeof(char *) * (word_count + 1));
 	if (strings == NULL)
 		return (NULL);
 	strings[word_count] = NULL;

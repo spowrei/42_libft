@@ -1,13 +1,25 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mukaplan <mukaplan@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/16 12:21:34 by mukaplan          #+#    #+#             */
+/*   Updated: 2024/11/16 12:21:35 by mukaplan         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-static int ft_digit(int n) //!! static olursa sadece bu dosyada görünür
+static int	ft_digit(int n)
 {
-	int digit;
+	int	digit;
+
 	if (n == 0)
 		return (1);
 	if (n < 0)
 		n *= -1;
-
 	digit = 0;
 	while (n > 0)
 	{
@@ -17,11 +29,11 @@ static int ft_digit(int n) //!! static olursa sadece bu dosyada görünür
 	return (digit);
 }
 
-char *ft_itoa(int n)
+char	*ft_itoa(int n)
 {
-	int digit;
-	char *str;
-	int coefficient;
+	int		digit;
+	char	*str;
+	int		coefficient;
 
 	digit = ft_digit(n);
 	coefficient = 1;

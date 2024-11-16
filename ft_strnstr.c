@@ -6,7 +6,7 @@
 /*   By: mukaplan <mukaplan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 19:39:57 by mukaplan          #+#    #+#             */
-/*   Updated: 2024/11/12 19:39:57 by mukaplan         ###   ########.fr       */
+/*   Updated: 2024/11/16 12:47:07 by mukaplan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,10 @@
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t size)
 {
-	unsigned int i;
-	unsigned int needle_len;
+	unsigned int	i;
+	unsigned int	needle_len;
 
 	needle_len = ft_strlen(needle);
-
 	if (needle_len == 0)
 		return ((char *)haystack);
 	if (size == 0)
@@ -30,9 +29,5 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t size)
 			return ((char *)&haystack[i]);
 		i++;
 	}
-	
 	return (NULL);
 }
-//size parametresi haystack dizisinde arama yapılacak maksimum karakter sayısını belirler.
-
-

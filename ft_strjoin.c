@@ -1,10 +1,22 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mukaplan <mukaplan@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/16 12:39:59 by mukaplan          #+#    #+#             */
+/*   Updated: 2024/11/16 12:40:14 by mukaplan         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-char *ft_strjoin(char const *s1, char const *s2)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	unsigned int s1_size;
-	unsigned int s2_size;
-	char *new_str;
+	unsigned int	s1_size;
+	unsigned int	s2_size;
+	char			*new_str;
 
 	if (s1 == NULL || s2 == NULL)
 		return (NULL);
