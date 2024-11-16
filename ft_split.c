@@ -6,7 +6,7 @@
 /*   By: mukaplan <mukaplan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/16 12:37:01 by mukaplan          #+#    #+#             */
-/*   Updated: 2024/11/16 12:38:32 by mukaplan         ###   ########.fr       */
+/*   Updated: 2024/11/16 15:03:06 by mukaplan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,17 @@ static int	ft_word_count(char const *s, char c)
 {
 	int	count;
 
-	count = 1;
-	while ((char)*s == c)
-		s++;
-	while ((char)*s != '\0')
+	count = 0;
+	while (*s != '\0')
 	{
-		if ((char)*s == c && (char)*(s + 1) != c && (char)*(s + 1) != '\0')
+		while (*s == c)
+			s++;
+		if (*s != '\0')
+		{
 			count++;
-		s++;
+			while (*s != '\0' && *s != c)
+				s++;
+		}
 	}
 	return (count);
 }
@@ -54,7 +57,7 @@ char	**ft_split(char const *s, char c)
 {
 	char			**strings;
 	unsigned int	i;
-	int				word_count;
+	unsigned int	word_count;
 	char			*cursor;
 
 	i = 0;

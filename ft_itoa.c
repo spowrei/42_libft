@@ -6,7 +6,7 @@
 /*   By: mukaplan <mukaplan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/16 12:21:34 by mukaplan          #+#    #+#             */
-/*   Updated: 2024/11/16 12:21:35 by mukaplan         ###   ########.fr       */
+/*   Updated: 2024/11/16 15:03:49 by mukaplan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,12 @@ static int	ft_digit(int n)
 
 	if (n == 0)
 		return (1);
-	if (n < 0)
-		n *= -1;
 	digit = 0;
+	if (n < 0)
+	{
+		n *= -1;
+		digit++;
+	}
 	while (n > 0)
 	{
 		digit++;
@@ -35,19 +38,19 @@ char	*ft_itoa(int n)
 	char	*str;
 	int		coefficient;
 
+	if (n == -2147483648)
+		return (ft_strdup("-2147483648"));
 	digit = ft_digit(n);
 	coefficient = 1;
 	if (n < 0)
 	{
 		coefficient = -1;
 		n *= -1;
-		digit++;
 	}
 	str = (char *)malloc(sizeof(char) * (digit + 1));
 	if (str == NULL)
 		return (NULL);
 	str[digit] = '\0';
-	str[0] = '0';
 	while (digit-- > 0)
 	{
 		str[digit] = '0' + (n % 10);

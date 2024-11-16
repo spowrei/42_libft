@@ -6,11 +6,11 @@
 /*   By: mukaplan <mukaplan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 22:28:08 by mukaplan          #+#    #+#             */
-/*   Updated: 2024/11/16 12:19:32 by mukaplan         ###   ########.fr       */
+/*   Updated: 2024/11/16 15:09:23 by mukaplan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(int c)
+int	ft_isdigit(int c)
 {
 	if (c >= '0' && c <= '9')
 		return (1);

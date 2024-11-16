@@ -6,7 +6,7 @@
 /*   By: mukaplan <mukaplan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 21:17:40 by mukaplan          #+#    #+#             */
-/*   Updated: 2024/11/16 12:38:55 by mukaplan         ###   ########.fr       */
+/*   Updated: 2024/11/16 16:00:31 by mukaplan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,16 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	int	i;
-	int	str_len;
+	char	*ptr;
 
-	str_len = ft_strlen(s);
-	i = 0;
-	while (i < str_len)
+	ptr = (char *)s;
+	while (*ptr)
 	{
-		if (*(s + i) == c)
-			return (s + i);
-		i++;
+		if (*ptr == (char)c)
+			return (ptr);
+		ptr++;
 	}
+	if (c == '\0')
+		return (ptr);
 	return (NULL);
 }
