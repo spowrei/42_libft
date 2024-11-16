@@ -6,11 +6,10 @@
 #    By: mukaplan <mukaplan@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/20 04:29:14 by jotavare          #+#    #+#              #
-#    Updated: 2024/11/16 17:25:20 by mukaplan         ###   ########.fr        #
+#    Updated: 2024/11/16 18:39:26 by mukaplan         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-CC = cc
 CFLAGS = -Wall -Wextra -Werror
 NAME = libft.a
 SRCS = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c ft_strlen.c ft_memset.c ft_bzero.c ft_memcpy.c\
@@ -22,9 +21,9 @@ OBJS = $(SRCS:.c=.o)
 
 all: $(NAME)
 
-$(NAME): $(OBJS)
-	ar rc $(NAME) $(OBJS)
-
+$(NAME):
+	gcc $(CFLAGS) -c $(SRCS)
+	ar rc $(NAME) *.o
 clean:
 	rm -rf $(OBJS)
 
