@@ -6,11 +6,12 @@
 /*   By: mukaplan <mukaplan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/16 12:39:15 by mukaplan          #+#    #+#             */
-/*   Updated: 2024/11/16 12:39:30 by mukaplan         ###   ########.fr       */
+/*   Updated: 2024/11/18 13:59:35 by mukaplan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 char	*ft_strdup(const char *s1)
 {

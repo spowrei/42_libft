@@ -6,11 +6,12 @@
 /*   By: mukaplan <mukaplan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/16 12:42:30 by mukaplan          #+#    #+#             */
-/*   Updated: 2024/11/16 12:47:29 by mukaplan         ###   ########.fr       */
+/*   Updated: 2024/11/18 14:00:18 by mukaplan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 char	*ft_strtrim(char const *s1, char const *set)
 {

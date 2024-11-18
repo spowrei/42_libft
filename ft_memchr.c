@@ -6,11 +6,11 @@
 /*   By: mukaplan <mukaplan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 22:13:24 by mukaplan          #+#    #+#             */
-/*   Updated: 2024/11/16 12:23:36 by mukaplan         ###   ########.fr       */
+/*   Updated: 2024/11/18 13:39:25 by mukaplan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stddef.h>
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {

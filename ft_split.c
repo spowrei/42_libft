@@ -6,11 +6,12 @@
 /*   By: mukaplan <mukaplan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/16 12:37:01 by mukaplan          #+#    #+#             */
-/*   Updated: 2024/11/16 15:03:06 by mukaplan         ###   ########.fr       */
+/*   Updated: 2024/11/18 14:00:33 by mukaplan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 static int	ft_word_count(char const *s, char c)
 {
@@ -70,6 +71,13 @@ char	**ft_split(char const *s, char c)
 	while (i < word_count)
 	{
 		strings[i] = ft_new_word(&cursor, c);
+		if (strings[i] == NULL)
+		{
+			while (--i >= 0)
+				free (strings[i]);
+			free (strings);
+			return (NULL);
+		}
 		i++;
 	}
 	return (strings);

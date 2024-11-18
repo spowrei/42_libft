@@ -6,11 +6,12 @@
 /*   By: mukaplan <mukaplan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/16 12:21:34 by mukaplan          #+#    #+#             */
-/*   Updated: 2024/11/16 15:03:49 by mukaplan         ###   ########.fr       */
+/*   Updated: 2024/11/18 14:00:43 by mukaplan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 static int	ft_digit(int n)
 {

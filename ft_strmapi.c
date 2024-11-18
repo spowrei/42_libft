@@ -6,18 +6,19 @@
 /*   By: mukaplan <mukaplan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/16 12:41:16 by mukaplan          #+#    #+#             */
-/*   Updated: 2024/11/16 14:26:25 by mukaplan         ###   ########.fr       */
+/*   Updated: 2024/11/18 14:07:48 by mukaplan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	char			*new_s;
 	unsigned int	i;
 
-	if (s == NULL)
+	if (s == NULL || f == NULL)
 		return (NULL);
 	new_s = (char *)malloc(sizeof(char) * (ft_strlen(s) + 1));
 	if (new_s == NULL)

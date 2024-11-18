@@ -6,11 +6,11 @@
 /*   By: mukaplan <mukaplan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 21:17:40 by mukaplan          #+#    #+#             */
-/*   Updated: 2024/11/16 16:00:31 by mukaplan         ###   ########.fr       */
+/*   Updated: 2024/11/18 13:42:40 by mukaplan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stddef.h>
 
 char	*ft_strchr(const char *s, int c)
 {

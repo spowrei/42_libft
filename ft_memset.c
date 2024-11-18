@@ -6,11 +6,11 @@
 /*   By: mukaplan <mukaplan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 13:41:11 by mukaplan          #+#    #+#             */
-/*   Updated: 2024/11/16 11:53:47 by mukaplan         ###   ########.fr       */
+/*   Updated: 2024/11/18 13:39:34 by mukaplan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stddef.h>
 
 void	*ft_memset(void *b, int c, size_t len)
 {

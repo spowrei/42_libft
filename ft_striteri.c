@@ -6,11 +6,11 @@
 /*   By: mukaplan <mukaplan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/16 12:39:39 by mukaplan          #+#    #+#             */
-/*   Updated: 2024/11/16 12:46:37 by mukaplan         ###   ########.fr       */
+/*   Updated: 2024/11/18 13:43:18 by mukaplan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stddef.h>
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {

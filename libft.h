@@ -6,15 +6,14 @@
 /*   By: mukaplan <mukaplan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 22:27:31 by mukaplan          #+#    #+#             */
-/*   Updated: 2024/11/16 13:05:42 by mukaplan         ###   ########.fr       */
+/*   Updated: 2024/11/18 12:38:54 by mukaplan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <stdlib.h> // size_t, NULL, malloc()
-# include <unistd.h>
+# include <stddef.h>
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
