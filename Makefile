@@ -6,7 +6,7 @@
 #    By: mukaplan <mukaplan@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/20 04:29:14 by jotavare          #+#    #+#              #
-#    Updated: 2024/11/16 19:46:28 by mukaplan         ###   ########.fr        #
+#    Updated: 2025/01/18 14:35:58 by mukaplan         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -50,8 +50,6 @@ SRCS = ft_isalpha.c \
 OBJS = $(SRCS:.c=.o)
 
 CFLAGS = -Wall -Werror -Wextra
-
-CC = cc
 
 RM = rm -rf
 

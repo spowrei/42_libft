@@ -6,7 +6,7 @@
 /*   By: mukaplan <mukaplan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 13:41:11 by mukaplan          #+#    #+#             */
-/*   Updated: 2024/11/18 13:39:34 by mukaplan         ###   ########.fr       */
+/*   Updated: 2025/01/18 14:36:50 by mukaplan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,5 @@ void	*ft_memset(void *b, int c, size_t len)
 		b_char[i] = c;
 		i++;
 	}
-	return ((void *)b);
+	return (b);
 }
