@@ -6,7 +6,7 @@
 /*   By: mukaplan <mukaplan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/16 12:37:01 by mukaplan          #+#    #+#             */
-/*   Updated: 2024/11/18 14:00:33 by mukaplan         ###   ########.fr       */
+/*   Updated: 2025/01/19 17:34:01 by mukaplan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,8 +57,8 @@ static char	*ft_new_word(char **cursor, char c)
 char	**ft_split(char const *s, char c)
 {
 	char			**strings;
-	unsigned int	i;
-	unsigned int	word_count;
+	int	i;
+	int	word_count;
 	char			*cursor;
 
 	i = 0;
